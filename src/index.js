@@ -6,21 +6,14 @@ app.use(express.static("./model"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 const client = require("../dataBase/dataBase.js");
-const lista = [];
+const router = require('../dataBase/dataBase.js');
+
 app.get("/list", client.user);
-
-app.post("/newUser", client.newUser, (req, res) => {
-  const user = req.body.name;
-  lista.push(user);
-  res.redirect("/list");
-});
-
 app.get("/digitalwatch", (req, res) => {
   res.render("index");
 });
-
-module.exports = {
-  lista,
-};
+app.post("/listUser", client.newUser);
+//Pegar todos os dados do banco de dados e gerar uma tabela no front-end
 
 app.listen(3000);
+
