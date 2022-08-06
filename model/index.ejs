@@ -24,12 +24,13 @@
         <table>
           <tr>
             <th>Nomes</th>
-            < % for (let user of users) { %>
           <tr>
             <td>
-              < %=user.name %>
+              <% todoDbList.forEach(function(user){ %>
+                <%= user %>
+              <% }); %> 
             </td>
-            < % } %>
+        
           </tr>
         </table>
       </form>
