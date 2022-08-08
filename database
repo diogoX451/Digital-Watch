@@ -1,1 +1,0 @@
-SELECT data -> 'name' AS nome FROM nome

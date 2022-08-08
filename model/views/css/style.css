@@ -29,3 +29,10 @@ body {
     height: 100px;
     width: 250px;
 }
+
+.form {
+    border-collapse: separate;
+    border-spacing: 10px 50px;
+    empty-cells: hide;
+    table-layout: fixed;
+}

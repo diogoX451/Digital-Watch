@@ -29,20 +29,37 @@ const newUser = (req, res) => {
     if (err) {
       console.log(err);
     }
-    res.redirect("/list");
+    res.redirect("/digitalwatch");
   });
 };
 const addUser = (req, res) => {
-  client.query("SELECT data -> 'name' AS nome FROM nome", (err, result) => {
+  client.query("SELECT data -> 'name' AS nome FROM nome ORDER BY NOME", (err, result) => {
     if (err) {
       console.log(err);
     }
-    res.render("index", { todoDbList: result.rows });
+    let lista = [];
+    for (let i = 0; i < result.rows.length; i++) {
+      var row = result.rows[i];
+      lista.push(row.nome);
+    }
+    res.render("pageIntial", { todoDbList: lista });
+
   });
 };
+const deleteUser = (req, res) => {
+  const id = req.params.id;
+  client.query('DELETE FROM "public"."nome" WHERE "id" = $1', [id], (err, result) => {
+    if (err) {
+      console.log(err);
+    }
+    res.send("Deleted successfully");
+  })
+};
+
 module.exports = {
   user,
   client,
   newUser,
   addUser,
+  deleteUser
 };

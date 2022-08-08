@@ -11,6 +11,7 @@ const router = require("../dataBase/dataBase.js");
 app.get("/list", client.user);
 app.get("/digitalwatch", client.addUser);
 app.post("/listUser", client.newUser);
+app.delete("/delete/:id", client.deleteUser);
 //Pegar todos os dados do banco de dados e gerar uma tabela no front-end
 
 app.listen(3000);
