@@ -11,7 +11,7 @@ Este projeto está em desenvolvimento na criação de um Relógio Digital, com a
     <a src="https://github.com/diogoX451">Diogo Almeida</a>
 </li>
 <li>
-    Anderson Rodrigues
+    <a src="https://github.com/DiogoAndersonRS080">>Anderson Rodrigues</a>
 </li>
 <li>
     <a src="https://github.com/DaniloM0204">Danilo Machado</a>
