@@ -2,39 +2,41 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
-  body,
-  html {
+body,
+html {
     min-height: 100vh;
     width: 100%;
     height: 100%;
-  }
+}
 
-  body {
+body {
     font-family: 'Jockey One', sans-serif;
     background-color: #292929;
-  }
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
 
-  ul {
+ul {
     display: flex;
     list-style: none;
-  }
+}
 
-  a {
+a {
     text-decoration: none;
-  }
+}
 
-  a:hover {
+a:hover {
     text-decoration: underline;
-  }
+}
 
-  .container {
+.container {
     /* background-image: radial-gradient(circle, #0c0c0c 0%, #050505 100%); */
     height: 100%;
-  }
+}
 
-  .navigation h1 {
+.navigation h1 {
     font-family: 'Jockey One';
     font-style: normal;
     font-weight: 400;
@@ -42,9 +44,9 @@
     line-height: 56px;
     color: #fff;
     align-items: center;
-  }
+}
 
-  .navigation {
+.navigation {
     position: fixed;
     justify-content: space-between;
     display: flex;
@@ -54,22 +56,22 @@
     top: 0px;
     align-items: center;
     background-color: #292929;
-  }
+}
 
-  .navigation a {
+.navigation a {
     font-family: 'Jockey One';
     font-style: normal;
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 42px;
     color: white;
-  }
+}
 
-  .navigation ul li {
+.navigation ul li {
     margin-left: 25px;
-  }
+}
 
-  .usuario {
+.usuario {
     width: 50%;
     display: flex;
     margin: 0 auto;
@@ -77,11 +79,11 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
+}
 
-  .clock {
+.clock {
     width: 60%;
-    height: 120px;
+    height: 180px;
     margin-top: 180px;
     align-items: center;
     border-radius: 10px;
@@ -90,10 +92,10 @@
     justify-content: center;
     color: #fff;
     border: 1px solid rgb(255, 255, 255);
-    background-color: #004a9eda;
-  }
+    background-color: #586FE9;
+}
 
-  .form {
+.form {
     padding: 10px;
 
     display: flex;
@@ -101,113 +103,123 @@
     align-items: center;
     border-radius: 10px;
 
-    background-color: #004a9eda;
-  }
+    background-color: #586FE9;
+}
 
-  .name::placeholder {
+.name::placeholder {
     color: #fff;
-  }
+}
 
-  .name {
+.name {
     width: 250px;
     font-size: 0.6rem;
     padding: 10px;
     border: none;
     border-radius: 10px;
-    background: #004a9eda;
+    background: #354dc3;
     border-bottom: 2px solid #ffffff;
-  }
+}
 
-  .name:focus {
+.name:focus {
     border: solid 2px rgb(255, 255, 255);
     border-radius: 10px;
     outline: 0;
     transition: 0.2s;
-  }
+}
 
-  .sub {
+.sub {
     font-size: 0.7rem;
     padding: 10px;
     border-radius: 10px;
     border: none;
     border: 2px solid #ffffff;
-  }
+}
 
-  .sub:hover {
+.sub:hover {
     cursor: pointer;
     background-color: #0084ff;
     border: 2px solid #0084ff;
     transition: 0.3s;
-  }
+}
 
-  .form table {
+.form table {
     margin-top: 15px;
     display: none;
-  }
+}
 
-  .title {
+.title {
     margin-bottom: 10px;
-  }
+}
 
-  .clock {
+.clock {
     margin-bottom: 20px;
-  }
+}
 
-  .nomes {
+.nomes {
     width: 100%;
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
     color: white;
-    background-color: #004a9eda;
-  }
+    background-color: #586FE9;
+}
 
-  .nomes ul {
+.nomes ul {
     display: flex;
     margin-top: 6px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     border-bottom: 1px solid white;
-  }
+}
 
-  .content-sobre {
+.content-sobre {
 
-    padding: 0 6%;
+    padding: 0 15%;
     display: flex;
-    flex-direction: column;
     overflow-wrap: break-word;
-  }
+}
 
-  .content-sobre h1 {
+h1 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: white;
-  }
+    text-align: center;
+}
 
-  .card {
-    min-width: 280px;
-    max-width: 680px;
-    display: flex;
-    padding: 35px;
+.content-sobre h1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.card {
+    min-width: 239px;
+    max-width: 673px;
+
+    padding: 40px;
     border-radius: 10px;
-    margin-bottom: 40px;
+    margin: 0px 20px 40px 0px;
 
-    border: 2px solid #808080;
-    background-color: #808080;
-  }
+    border: 2px solid #586FE9;
+    background-color: #586FE9;
 
-  .card:hover {
+
+}
+
+.card:hover {
     border: solid 2px #004a9eda;
     transition: .3s;
-  }
+}
 
-  .card img {
+.card img {
     width: 35%;
     border-radius: 50%;
-  }
+    margin-left: 105px
+}
 
-  .content {
+.content {
     margin-left: 25px;
     width: 250px;
-  }
+    text-align: center;
+}
