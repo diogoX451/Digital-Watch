@@ -241,12 +241,12 @@ form {
     color: var(--Text-color);
 }
 
-.card {
+div.card {
     display: flex;
     flex-direction: column;
     min-width: 230px;
     width: 380px;
-    height: 100%;
+    height: 490px;
     padding: 20px;
     align-items: center;
     text-align: center;
@@ -270,15 +270,19 @@ form {
 }
 
 .card h2 {
+    margin-top: 2px;
+    margin-bottom: 10px;
     font-size: 1.7rem;
 }
 
 .card h3 {
+    margin-bottom: 8px;
     font-size: 1.3rem;
 }
 
 .card p {
     width: 100%;
+    height: 460px;
     font-weight: 100;
     font-family: 'Roboto', sans-serif;
     font-size: 1.1rem;
@@ -286,7 +290,8 @@ form {
 }
 
 .card ul {
-    margin-top: 10px;
+    display: flex;
+    align-items: flex-end;
     gap: 20px;
 }
 
