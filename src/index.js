@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const port = process.env.PORT || 3000;
 app.set("view engine", "ejs");
 app.set("views", "./model");
 app.use(express.static("./model"));
@@ -14,4 +15,4 @@ app.post("/listUser", client.newUser);
 app.delete("/delete/:id", client.deleteUser);
 //Pegar todos os dados do banco de dados e gerar uma tabela no front-end
 
-app.listen(3000);
+app.listen(port);
