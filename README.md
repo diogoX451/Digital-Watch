@@ -1,19 +1,33 @@
-<h1>Projeto Digital-Watch</h1>
 
-<h3>
+# Projeto Digital-Watch
+
 Este projeto está em desenvolvimento na criação de um Relógio Digital, com as Tecnologias de Front-end como HTML, CSS e JavaScript + desenvolvimento Backend com Node.js e banco de dados PostgreSQL
-</h3>
-<br>
 
-<h2>Desenvolvido Por: </h2>
-<ul>
-<li>
-    <a src="https://github.com/diogoX451">Diogo Almeida</a>
-</li>
-<li>
-    <a src="https://github.com/DiogoAndersonRS080">>Anderson Rodrigues</a>
-</li>
-<li>
-    <a src="https://github.com/DaniloM0204">Danilo Machado</a>
-</li>
-</ul>
+
+## Funcionalidades
+
+- Temas dark e Purple 
+- Preview das horas em  tempo real
+- Responsivo com todos os tipos de tela
+- Banco de Dados para armazenar os nomes
+
+
+## Stack utilizada
+
+**Front-end:** HTML, EJS, CSS
+
+**Back-end:** Node, Express, PostegreSQL
+
+
+## Autores
+
+- [@diogoX451](https://www.github.com/diogoX451)
+- [@YanFellippe](https://github.com/YanFellippe)
+- [@bernardogava](https://www.github.com/bernardogava)
+- [@AndersonRS080](https://www.github.com/AndersonRS080)
+- [@DaniloM0204](https://www.github.com/DaniloM0204)
+
+## Feedback
+
+Se você tiver algum feedback, por favor nos deixe saber por meio de diogosgn@gmail.com
+
