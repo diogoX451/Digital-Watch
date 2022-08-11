@@ -4,7 +4,7 @@ const client = new Pool({
   user: "thqkpwob",
   host: "kesavan.db.elephantsql.com",
   database: "thqkpwob",
-  password: "74oPAldu-IVYK1b1lFyGQhRia-NAkhPG",
+  password: "74oPAldu-IVYK1b1lFyGQhRia",
   port: 5432,
 });
 client.connect((err) => {
