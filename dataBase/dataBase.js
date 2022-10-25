@@ -13,6 +13,7 @@ client.connect((err) => {
   }
   console.log("Connected to database");
 });
+
 const user = (req, res) => {
   client.query('SELECT * FROM "public"."nome" LIMIT 100', (err, result) => {
     if (err) {
@@ -33,27 +34,33 @@ const newUser = (req, res) => {
   });
 };
 const addUser = (req, res) => {
-  client.query("SELECT data -> 'name' AS nome FROM nome ORDER BY NOME", (err, result) => {
-    if (err) {
-      console.log(err);
+  client.query(
+    "SELECT data -> 'name' AS nome FROM nome ORDER BY NOME",
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      }
+      let lista = [];
+      for (let i = 0; i < result.rows.length; i++) {
+        var row = result.rows[i];
+        lista.push(row.nome);
+      }
+      res.render("pageIntial", { todoDbList: lista });
     }
-    let lista = [];
-    for (let i = 0; i < result.rows.length; i++) {
-      var row = result.rows[i];
-      lista.push(row.nome);
-    }
-    res.render("pageIntial", { todoDbList: lista });
-
-  });
+  );
 };
 const deleteUser = (req, res) => {
   const id = req.params.id;
-  client.query('DELETE FROM "public"."nome" WHERE "id" = $1', [id], (err, result) => {
-    if (err) {
-      console.log(err);
+  client.query(
+    'DELETE FROM "public"."nome" WHERE "id" = $1',
+    [id],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      }
+      res.send("Deleted successfully");
     }
-    res.send("Deleted successfully");
-  })
+  );
 };
 
 module.exports = {
@@ -61,5 +68,5 @@ module.exports = {
   client,
   newUser,
   addUser,
-  deleteUser
+  deleteUser,
 };

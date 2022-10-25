@@ -1,145 +1,216 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./views/css/style.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./views/css/style.css" />
+    <link rel="shortcut icon" href=".\views\img\relogio.png" />
 
-  <link rel="shortcut icon" href=".\views\img\relogio.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Digital Watch</title>
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Roboto&display=swap" rel="stylesheet" />
-  <title>Digital Watch</title>
-</head>
+  <body>
+    <!-- Div começa aqui-->
+    <div class="container">
+      <nav class="navigation">
+        <div class="logo">
+          <h1>Digital Watch</h1>
+        </div>
+        <div class="menu-mbl">
+          <input id="menu-toggle" type="checkbox" />
+          <label class="menu-btn" for="menu-toggle">
+            <span></span>
+          </label>
 
-<body>
-  <!-- Div começa aqui-->
-  <div class="container">
-    <nav class="navigation">
-      <div class="logo">
-        <h1>Digital Watch</h1>
-      </div>
-      <div class="menu-mbl">
-        <input id="menu-toggle" type="checkbox" />
-        <label class="menu-btn" for="menu-toggle">
-          <span></span>
-        </label>
+          <ul class="menu-box">
+            <li><a class="menu-item" href="#">Coloque seu nome</a></li>
+            <li><a class="menu-item" href="#sobre">Sobre nós</a></li>
+          </ul>
+        </div>
 
-        <ul class="menu-box">
-          <li><a class="menu-item" href="#">Coloque seu nome</a></li>
-          <li><a class="menu-item" href="#sobre">Sobre nós</a></li>
-        </ul>
-      </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">Coloque seu nome</a></li>
+            <li><a href="#sobre">Sobre nós</a></li>
+          </ul>
+        </div>
+      </nav>
 
-      <div class="menu">
-        <ul>
-          <li><a href="#">Coloque seu nome</a></li>
-          <li><a href="#sobre">Sobre nós</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <section id="home" class="usuario">
-      <div class="clock"></div>
-      <h2>COLOQUE SEU NOME PARA FICAR REGISTRADO</h2>
-      <div id="nome" class="form">
-        <form action="/listUser" method="post">
-          <input class="name" type="text" name="name" placeholder="Nome" />
-          <input class="sub" type="submit" value="Enviar" />
-          <div class="nomes">
-            <% for (let i=1; i < todoDbList.length; i++){ %>
-              <h4>
-                <%= todoDbList[i] %>
-              </h4>
+      <section id="home" class="usuario">
+        <div class="clock"></div>
+        <h2>COLOQUE SEU NOME PARA FICAR REGISTRADO</h2>
+        <div id="nome" class="form">
+          <form action="/listUser" method="post">
+            <input class="name" type="text" name="name" placeholder="Nome" />
+            <input class="sub" type="submit" value="Enviar" />
+            <div class="nomes">
+              <% for (let i=1; i < todoDbList.length; i++){ %>
+              <h4><%= todoDbList[i] %></h4>
               <% } %>
-          </div>
-        </form>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <section id="sobre">
+      <h1>Sobre Nós</h1>
+      <div class="content-sobre">
+        <div class="card">
+          <img
+            src="https://avatars.githubusercontent.com/u/69609025?v=4"
+            alt="Imagem do Github"
+          />
+          <h2>Diogo Almeida</h2>
+          <h3>Estudante de Engenharia de Software</h3>
+          <p>
+            Estou no segundo periodo de Engenharia de Software, no Instituto
+            Federal de Goiás, campus Inhumas. Sendo assim, estou estudando para
+            me torna um desenvolvedor Back-End e aplicar meus conhecimentos em
+            algumas aplicações web ou em algum problema social que envolva
+            Software.
+          </p>
+          <ul>
+            <li>
+              <a href="https://github.com/diogoX451" target="_blank">GitHub</a>
+            </li>
+            <li>
+              <a
+                href="https://br.linkedin.com/in/diogo-dos-reis-almeida-3973541b1?trk=people-guest_people_search-card"
+                target="_blank"
+                >Linkedin</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://avatars.githubusercontent.com/u/105132452?v=4"
+            alt="Imagem do Github"
+          />
+
+          <h2>Anderson Rodrigues</h2>
+          <h3>Desenvolvedor Front End em aprendizado</h3>
+          <p>
+            Apaixonado por tecnologia comecei no mundo da programação esse ano
+            através de um familiar meu. Durante esse tempo estou me dedicando e
+            buscando sempre evoluir como um bom desenvolvedor Front End, visando
+            o aprendizado contínuo colocando em prática meus conhecimentos
+            adquiridos em projetos reais.
+          </p>
+          <ul>
+            <li>
+              <a href="https://github.com/AndersonRS080" target="_blank"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/anderson-r-souza"
+                target="_blank"
+                >Linkedin</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="card">
+          <img
+            src="https://avatars.githubusercontent.com/u/89107323?v=4"
+            alt="Imagem do Github"
+          />
+
+          <h2>Danilo Machado Bezerra</h2>
+          <h3>Desenvolvedor Jr/Futuro Engenheiro Aeroespacial</h3>
+          <p>
+            Desde quando tive meu primeiro contato com robótica, de alguma forma
+            me influenciou para focar em programação, tanto como desenvolvedor
+            Back/Front end, quanto Machine Learning.Estou formando em ADS e
+            partindo pra Engenharia Aeroespacial, atualmente estou desenvolvendo
+            projetos Back-end com Java e NodeJs, e estudando novas formas de
+            melhorar minhas boas práticas no Front-end. Apaixonado por Javinha e
+            Python.
+          </p>
+          <ul>
+            <li>
+              <a href="https://github.com/DaniloM0204" target="_blank"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/danilo-machado-a10403173"
+                target="_parent"
+                >Linkedin</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://avatars.githubusercontent.com/u/69776644?v=4"
+            alt="Imagem do Github"
+          />
+
+          <h2>Yan Fellpe</h2>
+          <h3>Estudante de Ciência da Computação</h3>
+          <p>
+            Faço Ciência da Computação e busco me tornar um programador full
+            stack também trabalhando com banco de dados. Amo a tecnologia e o
+            aprendizado, sempre buscando melhorar a cada projeto.
+          </p>
+          <ul>
+            <li>
+              <a href="https://github.com/YanFellippe" target="_blank"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/yan-fellippe-gomes-basilio-3229b81b9/"
+                target="_blank"
+                >Linkedin</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="card">
+          <img
+            src="https://avatars.githubusercontent.com/u/63014958?v=4"
+            alt="Imagem do Github"
+          />
+
+          <h2>Bernardo Campos Gava</h2>
+          <h3>Desenvolvedor Back-End</h3>
+          <p>
+            Estudo nos tempos livre, programo desde 2019 sempre em JavaScript.
+            Sempre estou em busca de uma evolução e melhoras na programação
+          </p>
+          <ul>
+            <li>
+              <a href="https://github.com/bernardogava" target="_blank"
+                >GitHub</a
+              >
+            </li>
+            <li><a href="#" target="_blank">Linkedin</a></li>
+          </ul>
+        </div>
       </div>
     </section>
-  </div>
 
-  <section id="sobre">
-    <h1>Sobre Nós</h1>
-    <div class="content-sobre">
-      <div class="card">
-        <img src="https://avatars.githubusercontent.com/u/69609025?v=4">
-        <h2>Diogo Almeida</h2>
-        <h3>Estudante de Engenharia de Software</h3>
-        <p>
-          Estou no segundo periodo de Engenharia de Software, no Instituto Federal de Goiás, campus Inhumas. Sendo
-          assim,
-          estou estudando para me torna um desenvolvedor Back-End e aplicar meus conhecimentos
-          em algumas aplicações web ou em algum problema social que envolva Software.
-        </p>
-        <ul>
-          <li><a href="https://github.com/diogoX451" target="_blank">GitHub</a></li>
-          <li><a href="https://br.linkedin.com/in/diogo-dos-reis-almeida-3973541b1?trk=people-guest_people_search-card"
-              target="_blank">Linkedin</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <img src="https://avatars.githubusercontent.com/u/105132452?v=4" alt="" />
-
-        <h2>Anderson Rodrigues</h2>
-        <h3>Desenvolvedor Front End em aprendizado</h3>
-        <p> Apaixonado por tecnologia comecei no mundo da programação esse ano através de um familiar meu. Durante esse
-          tempo estou me dedicando e buscando sempre evoluir como um bom desenvolvedor Front End, visando o aprendizado
-          contínuo colocando em prática meus conhecimentos adquiridos em projetos reais.</p>
-        <ul>
-          <li><a href="https://github.com/AndersonRS080" target="_blank">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/anderson-r-souza" target="_blank">Linkedin</a></li>
-        </ul>
-      </div>
-      <div class="card">
-        <img src="https://avatars.githubusercontent.com/u/89107323?v=4" alt="" />
-
-        <h2>Danilo Machado Bezerra</h2>
-        <h3>Desenvolvedor Jr/Futuro Engenheiro Aeroespacial</h3>
-        <p>Desde quando tive meu primeiro contato com robótica, de alguma forma me influenciou para focar em programação, tanto como desenvolvedor Back/Front end, quanto Machine Learning.Estou formando em ADS e partindo pra Engenharia Aeroespacial, atualmente estou desenvolvendo projetos Back-end com Java e NodeJs, e estudando novas formas de melhorar minhas boas práticas no Front-end. Apaixonado por Javinha e Python.</p>
-        <ul>
-          <li><a href="https://github.com/DaniloM0204" target="_blank">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/danilo-machado-a10403173" target="_parent">Linkedin</a></li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <img src="https://avatars.githubusercontent.com/u/69776644?v=4" alt="" />
-
-        <h2>Yan Fellpe</h2>
-        <h3>Estudante de Ciência da Computação</h3>
-        <p>Faço Ciência da Computação e busco me tornar um programador full stack também trabalhando com banco de dados.
-          Amo a tecnologia e o aprendizado, sempre buscando melhorar a cada projeto.</p>
-        <ul>
-          <li><a href="https://github.com/YanFellippe" target="_blank">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/yan-fellippe-gomes-basilio-3229b81b9/" target="_blank">Linkedin</a>
-          </li>
-        </ul>
-      </div>
-      <div class="card">
-        <img src="https://avatars.githubusercontent.com/u/63014958?v=4" alt="" />
-
-        <h2>Bernardo Campos Gava</h2>
-        <h3>Desenvolvedor Back-End</h3>
-        <p>Estudo nos tempos livre, programo desde 2019 sempre em JavaScript. Sempre estou em busca de uma evolução e
-          melhoras na programação</p>
-        <ul>
-          <li><a href="https://github.com/bernardogava" target="_blank">GitHub</a></li>
-          <li><a href="#" target="_blank">Linkedin</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <h2>Todos os direitos reservados.</h2>
-    ©2022
-  </footer>
-</body>
-<script src="./views/js/digitalHours.js"></script>
-
+    <footer>
+      <h2>Todos os direitos reservados.</h2>
+      ©2022
+    </footer>
+  </body>
+  <script src="./views/js/digitalHours.js"></script>
 </html>
