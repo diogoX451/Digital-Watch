@@ -24,7 +24,7 @@ Este projeto está em desenvolvimento na criação de um Relógio Digital, com a
 - [@diogoX451](https://www.github.com/diogoX451)
 - [@YanFellippe](https://github.com/YanFellippe)
 - [@bernardogava](https://www.github.com/bernardogava)
-- [@AndersonRS080](https://www.github.com/AndersonRS080)
+- [@AndersonRS080](https://github.com/AndersonRodrigs)
 - [@DaniloM0204](https://www.github.com/DaniloM0204)
 
 ## Feedback
