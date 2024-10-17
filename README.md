@@ -1,7 +1,7 @@
 
 # Projeto Digital-Watch
 
-Este projeto está em desenvolvimento na criação de um Relógio Digital, com as Tecnologias de Front-end como HTML, CSS e JavaScript + desenvolvimento Backend com Node.js e banco de dados PostgreSQL
+Este projeto está em desenvolvimento na criação de um Relógio Digital, com as Tecnologias de Front-end como HTML, CSS e JavaScript + desenvolvimento Backend com Node.js e Database PostgreSQL
 
 
 ## Funcionalidades
